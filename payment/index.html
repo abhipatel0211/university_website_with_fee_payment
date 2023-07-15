@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Payment Information</title>
+  </head>
+  <body>
+    <form class="container" action="integration.php" method="post">
+      <h1 class="main_heading">PAYMENT FORM</h1>
+      <p>Required fields are followed by *</p>
+      <h3>Contact Details</h3>
+      <p>
+        Name* :
+        <input type="text" name="name" id="name" placeholder="Name" required />
+      </p>
+      <p>
+        Enrollment Number* :
+        <input
+          type="text"
+          name="en-no"
+          id="en-no"
+          placeholder="Enter Your University Enrollment Number"
+          required
+        />
+      </p>
+      <p>
+        Email* :
+        <input
+          type="email"
+          name="email"
+          id="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          placeholder="example@gmail.com"
+          required
+        />
+      </p>
+      <p>
+        Mobile Number * :
+        <input
+          type="text"
+          name="mobno"
+          id="mobno"
+          pattern="[6789][0-9]{9}"
+          placeholder="Enter 10 digit mobile number"
+          required
+        />
+      </p>
+      <p>
+        Address :
+        <textarea
+          name="address"
+          id="address"
+          cols="100"
+          rows="8"
+          placeholder="Address"
+        ></textarea>
+      </p>
+      <p>
+        Pincode* :
+        <input
+          type="text"
+          name="pincode"
+          id="pincode"
+          pattern="[1-9][0-9]{5}"
+          placeholder="pincode of the area (6 digits)"
+          required
+        />
+      </p>
+      <p>
+        Amount* :
+        <input
+          type="number"
+          name="amount"
+          id="amount"
+          placeholder="Amount"
+          required
+        />
+      </p>
+      <hr />
+      <p><input name="submit" type="submit" value="Pay Now" class="btn" /></p>
+      <p><input type="reset" value="Reset" class="btn" /></p>
+    </form>
+  </body>
+</html>
